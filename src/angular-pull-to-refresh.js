@@ -13,7 +13,8 @@ angular.module('mgcrea.pullToRefresh', []).constant('pullToRefreshConfig', {
       release: 'fa fa-arrow-up',
       loading: 'fa fa-refresh fa-spin'
     }
-}).directive('pullToRefresh', function($compile, $timeout, $q, pullToRefreshConfig, $injector) {
+})
+.directive('pullToRefresh', function($compile, $timeout, $q, pullToRefreshConfig, $injector) {
     return {
       scope: true,
       restrict: 'A',
