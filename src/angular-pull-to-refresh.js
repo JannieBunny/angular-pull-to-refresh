@@ -1,24 +1,19 @@
 'use strict';
 
-angular.module('mgcrea.pullToRefresh', [])
-
-  .constant('pullToRefreshConfig', {
+angular.module('mgcrea.pullToRefresh', []).constant('pullToRefreshConfig', {
     treshold: 60,
     debounce: 400,
     text: {
-      pull: 'pull to refresh',
-      release: 'release to refresh',
-      loading: 'refreshing...'
+      pull: 'Pull to Refresh',
+      release: 'Release to Refresh',
+      loading: 'Loading...'
     },
     icon: {
       pull: 'fa fa-arrow-down',
       release: 'fa fa-arrow-up',
       loading: 'fa fa-refresh fa-spin'
     }
-  })
-
-  .directive('pullToRefresh', function($compile, $timeout, $q, pullToRefreshConfig, $injector) {
-
+}).directive('pullToRefresh', function($compile, $timeout, $q, pullToRefreshConfig, $injector) {
     return {
       scope: true,
       restrict: 'A',
